@@ -4,7 +4,7 @@ Github repo for Youtube course [10 HTML CSS JavaScript projects](https://www.you
 
 ## Index
 
--   [01 - Weahter app](#01-weather-app)
+-   [01 - Weather app](#01-weather-app)
 -   [02 - Image Search App](#02-image-search-app)
 
 ## 01 Weather App
