@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+            name="description"
+            content="100 JS Apps - Weather App"
+            name="keywords"
+            content="100 JS Apps, Weather App" />
+        <title>Weather App</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <main>
+            <section class="container">
+                <h1>Weather App</h1>
+                <form>
+                    <input class="form-elements" type="text" id="city-input" placeholder="Enter City Name" />
+                    <input class="form-elements" type="submit" value="Get Weather" />
+                </form>
+                <div id="weather-data" class="weather-data">
+                    <div class="icon"></div>
+                    <div class="temperature">
+                        <div class="temp-minimum">--°C</div>
+                        <div class="temp-actual">--°C</div>
+                        <div class="temp-maximum">--°C</div>
+                    </div>
+                    <div class="description">--</div>
+                    <div class="details">
+                        <div id="feels-like">Feels like: --°C</div>
+                        <div id="humidity">Humidity: --%</div>
+                        <div id="wind-speed">Wind speed: -- m/s</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; δοῦλοι Χριστοῦ Inc.</p>
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>
