@@ -11,4 +11,9 @@ See [download-directory.github.io](https://download-directory.github.io/)
 
 ## 01 Weather App
 
+-   TODO:
+    -   Store API key in environment variable, and retreive it in the Javascript code.
+    -   Learn and understand how arrow functions work.
+    -   Go through each line of code in the original .js file and make sure to understand what every part of it does.
+
 ## 02 Image Search App
