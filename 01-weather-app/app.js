@@ -1,4 +1,33 @@
-const weatherAPIKey = "6a2a9c37be26cd3797bc389a9a28d515";
+let weatherAPIKey = "";
+
+function readFile() {
+    const fileInput = document.getElementById("api-file");
+
+    // Check if a file has been selected
+    if (fileInput.files.length > 0) {
+        const selectedFile = fileInput.files[0];
+        const reader = new FileReader();
+
+        // Define the action to take when the file is loaded
+        reader.onload = function (event) {
+            const fileContent = event.target.result;
+            weatherAPIKey = JSON.parse(fileContent).apiKey;
+            // console.log(`Weather API Key: ${weatherAPIKey}`);
+        };
+
+        console.log(`Weather API Key: ${weatherAPIKey}`);
+        // Read the file as text
+        // reader.readAsText(selectedFile).json();
+        // console.log(reader.readAsText(selectedFile));
+    } else {
+        console.log("No file selected");
+    }
+}
+
+console.log(`Weather API Key: ${weatherAPIKey}`);
+
+const apiFileInput = document.getElementById("api-file");
+apiFileInput.addEventListener("change", readFile);
 
 const formElement = document.querySelector("form");
 const cityInputElement = document.getElementById("city-input");
@@ -16,7 +45,6 @@ function onSubmit(event) {
 formElement.addEventListener("submit", onSubmit);
 
 async function getWeatherData(cityValue) {
-    console.log("Test");
     try {
         const weatherAPIResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${weatherAPIKey}&units=metric`);
 
