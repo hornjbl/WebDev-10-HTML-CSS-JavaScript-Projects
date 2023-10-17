@@ -9,8 +9,8 @@ fetch(urlKeyFile)
         return response.json();
     })
     .then((data) => {
-        // console.log(data);
-        const weatherAPIKey = data;
+        console.log(data.apiKey);
+        const weatherAPIKey = data.apiKey;
 
         const formElement = document.querySelector("form");
         const cityInputElement = document.getElementById("city-input");
