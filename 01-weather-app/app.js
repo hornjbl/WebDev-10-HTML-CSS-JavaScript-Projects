@@ -9,7 +9,7 @@ fetch(urlKeyFile)
         return response.json();
     })
     .then((data) => {
-        console.log(data.apiKey);
+        // console.log(data.apiKey);
         const weatherAPIKey = data.apiKey;
 
         const formElement = document.querySelector("form");
@@ -23,8 +23,6 @@ fetch(urlKeyFile)
             const cityValue = cityInputElement.value;
             console.log("The city that was provided was: " + cityValue);
             getWeatherData(cityValue);
-
-            // weatherDataElement.style.display = "flex";
         }
 
         async function getWeatherData(cityValue) {
